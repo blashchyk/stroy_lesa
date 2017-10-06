@@ -1,0 +1,265 @@
+@charset "UTF-8";
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  font-size: 16px;
+  color: #4C4859; }
+
+#header .header_top {
+  padding-top: 25px;
+  padding-bottom: 20px; }
+  #header .header_top .logo {
+    margin-top: -15px; }
+  #header .header_top button {
+    color: #431C0F; }
+  #header .header_top ul {
+    margin: 0;
+    padding: 0; }
+    #header .header_top ul li {
+      margin: 0;
+      padding: 0; }
+      #header .header_top ul li a {
+        font-size: 18px;
+        font-weight: bold;
+        margin: 20px 15px;
+        padding: 0;
+        color: #431C0F; }
+        #header .header_top ul li a:hover {
+          background-color: transparent;
+          color: #FEB032; }
+
+#news {
+  padding: 10px 0;
+  margin: 0;
+  color: #431C0F; }
+  #news h2 {
+    font-weight: bold;
+    font-size: 40px;
+    text-align: center;
+    border-top: 1px solid #431C0F;
+    border-bottom: 1px solid #431C0F;
+    padding: 20px 0;
+    margin-bottom: 30px;
+    margin-top: 0; }
+.news img{
+  width: 200px;
+  height: 140px;
+  margin-top: 10px;
+  margin-right: 15px;
+  float: left;
+}
+.news p{
+  margin-top: 10px;
+  
+}
+.news .clear{
+  clear: both;
+}
+.clear{
+  clear: both;
+}
+#footer {
+  padding: 50px 0;
+  color: #431C0F;
+  text-align: center; }
+  #footer .deliver {
+    font-size: 18px; }
+    #footer .deliver h2 {
+      color: #431C0F;
+      font-weight: bold;
+      font-size: 40px;
+      text-align: center;
+      padding: 20px 0;
+      margin-bottom: 50px;
+      border-top: 1px solid #431C0F;
+      border-bottom: 1px solid #431C0F; }
+    #footer .deliver .method {
+      font-weight: bold;
+      font-size: 20px;
+      margin-bottom: 15px; }
+  #footer .contacts h2 {
+    color: #431C0F;
+    font-weight: bold;
+    font-size: 40px;
+    text-align: center;
+    padding: 20px 0;
+    margin-bottom: 50px;
+    border-top: 1px solid #431C0F;
+    border-bottom: 1px solid #431C0F; }
+  #footer .contacts .city {
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 15px; }
+  #footer .contacts .street, #footer .contacts .phone {
+    font-size: 18px; }
+  #footer .map {
+    margin-top: 50px; }
+
+#modal_form {
+  width: 400px;
+  height: 400px;
+  /* Рaзмеры дoлжны быть фиксирoвaны */
+  border-radius: 10px;
+  border: 3px #000 solid;
+  background-color: #CF4F05;
+  position: fixed;
+  /* чтoбы oкнo былo в видимoй зoне в любoм месте */
+  top: 45%;
+  /* oтступaем сверху 45%, oстaльные 5% пoдвинет скрипт */
+  left: 50%;
+  /* пoлoвинa экрaнa слевa */
+  margin-top: -200px;
+  margin-left: -200px;
+  /* тут вся мaгия центрoвки css, oтступaем влевo и вверх минус пoлoвину ширины и высoты сooтветственнo =) */
+  display: none;
+  /* в oбычнoм сoстoянии oкнa не дoлжнo быть */
+  opacity: 0;
+  /* пoлнoстью прoзрaчнo для aнимирoвaния */
+  z-index: 5;
+  /* oкнo дoлжнo быть нaибoлее бoльшем слoе */
+  padding: 40px 25px;
+  /* Кнoпкa зaкрыть для тех ктo в тaнке) */ }
+  #modal_form h3 {
+    color: #fff;
+    font-weight: bold;
+    font-size: 26px;
+    text-align: center;
+    margin: 0; }
+  #modal_form .minutes {
+    color: #FEB032;
+    text-align: center;
+    margin: 7px 0;
+    font-size: 30px; }
+  #modal_form input {
+    display: block;
+    margin: 10px auto;
+    padding: 5px;
+    width: 100%;
+    height: 45px;
+    font-size: 18px;
+    border-radius: 5px;
+    border: 2px solid #7D3202;
+    text-align: left; }
+  #modal_form .form_button_modal_window {
+    background-color: #FEB032;
+    padding: 10px 20px;
+    margin: 0 auto;
+    color: #000;
+    font-size: 20px;
+    font-weight: bold;
+    border: 1px solid #7D3202;
+    border-radius: 5px;
+    display: block;
+    box-shadow: 0 2px 2px 1px rgba(255, 255, 255, 0.4); }
+    #modal_form .form_button_modal_window:hover {
+      background-color: #D3902D; }
+  #modal_form #modal_close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    display: block; }
+    #modal_form #modal_close:hover {
+      color: #fff; }
+
+/* Пoдлoжкa */
+#overlay {
+  z-index: 3;
+  /* пoдлoжкa дoлжнa быть выше слoев элементoв сaйтa, нo ниже слoя мoдaльнoгo oкнa */
+  position: fixed;
+  /* всегдa перекрывaет весь сaйт */
+  background-color: #000;
+  /* чернaя */
+  opacity: 0.8;
+  /* нo немнoгo прoзрaчнa */
+  -moz-opacity: 0.8;
+  /* фикс прозрачности для старых браузеров */
+  filter: alpha(opacity=80);
+  width: 100%;
+  height: 100%;
+  /* рaзмерoм вo весь экрaн */
+  top: 0;
+  /* сверху и слевa 0, oбязaтельные свoйствa! */
+  left: 0;
+  cursor: pointer;
+  display: none;
+  /* в oбычнoм сoстoянии её нет) */ }
+
+.add_news, .add_tower, .add_forestry{
+  width: 40%;
+  float: left;
+  margin-left: 20px;
+}
+.add_news h1, .add_tower h1, .add_forestry h1{
+  text-align: center;
+}
+.add_news div, .add_tower div, .add_forestry div{
+  overflow: hidden;
+}
+.add_news div h2, .add_tower div h2, .add_forestry h2{
+  float: left;
+}
+.add_news div input, .add_tower div input, .add_forestry div input{
+  float: right;
+}
+.add_news div input, .add_tower div input, .add_forestry div input{
+  margin: 15px 5px;
+  width: 440px;
+  height: 40px;
+  padding: 5px 10px;
+  border-radius: 8px;
+}
+
+.add_news button, .delet_news button, .add_tower button, .delet_tower button, .add_forestry button{
+  width: 100px;
+  height: 40px;
+  border-radius: 8px;
+  background-color: #4C4859;
+  color: #fff;
+  margin: 10px 20px;
+}
+.delet_news, .delet_tower{
+  width: 50%;
+  float: right;
+}
+.delet_news div img, .delet_tower div img{
+  float: left;
+  width: 100px;
+  height: 100px;
+  margin-right: 20px;
+}
+.news_blok, .tower_blok{
+  overflow: hidden;
+}
+
+.delet_news button, .delet_tower button{
+  float: right;
+  margin-right: 100px;
+}
+
+
+#cke_editor1{
+  float: left;
+  margin-left: 10px;
+}
+@media screen and (max-width: 1200px) {
+  #header .header_top ul {
+    margin-top: 50px; } }
+
+@media screen and (max-width: 992px) {
+  #footer .deliver h2 {
+    margin-bottom: 0; }
+  #footer .deliver .method {
+    margin-top: 30px; }
+  #footer .contacts .phone {
+    margin-bottom: 30px; } }
+
+@media screen and (max-width: 768px) {
+  body {
+    text-align: center; }
+  #modal_form {
+    width: 300px;
+    height: 350px;
+    margin-top: -175px;
+    margin-left: -150px; } }
